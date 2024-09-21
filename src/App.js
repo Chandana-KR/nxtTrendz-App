@@ -42,15 +42,17 @@ class App extends Component {
 
   decrementCartItemQuantity = id => {
     this.setState(prevState => ({
-      cartList: prevState.cartList.map(item => {
-        if (item.id === id) {
-          return {
-            ...item,
-            quantity: item.quantity > 1 ? item.quantity - 1 : 0,
+      cartList: prevState.cartList
+        .map(item => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: item.quantity > 1 ? item.quantity - 1 : 0,
+            }
           }
-        }
-        return item
-      }),
+          return item
+        })
+        .filter(item => item.quantity > 0),
     }))
   }
 

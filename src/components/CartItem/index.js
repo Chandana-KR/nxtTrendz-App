@@ -66,7 +66,7 @@ const CartItem = props => (
                 onClick={onRemoveCartItem}
                 data-testid="remove"
               >
-                Remove
+                <p className="remove-text">Remove</p>
               </button>
             </div>
           </div>

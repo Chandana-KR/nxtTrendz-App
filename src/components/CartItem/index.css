@@ -121,20 +121,20 @@
 }
 
 .remove-button {
+  display: flex;
   background-color: transparent;
   color: #334155;
   font-family: 'Roboto';
   font-size: 10px;
   line-height: 16px;
-  border: none;
+  border-width: 0px;
   outline: none;
   cursor: pointer;
 }
-
-@media screen and (min-width: 768px) {
-  .remove-button {
-    display: none;
-  }
+.remove-text {
+  font-family: 'Roboto';
+  color: #000000;
+  display: flex;
 }
 
 .delete-button {
@@ -147,6 +147,15 @@
 
 @media screen and (max-width: 767px) {
   .delete-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .remove-button {
+    display: none;
+  }
+  .remove-text {
     display: none;
   }
 }
